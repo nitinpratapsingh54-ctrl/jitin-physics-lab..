@@ -1,0 +1,4055 @@
+
+<!-- saved from url=(0032)http://127.0.0.1:5500/Hello.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>```html
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jitin Physics Lab - 50 Live Experiments</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#eef5fb;
+    color:#17202a;
+}
+
+header{
+    background:linear-gradient(135deg,#031b3d,#075ea8,#00a8cc);
+    color:white;
+    text-align:center;
+    padding:35px 15px;
+}
+
+header h1{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:18px;
+}
+
+nav{
+    background:#02152d;
+    padding:14px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 12px;
+    font-weight:bold;
+}
+
+.container{
+    width:94%;
+    max-width:1250px;
+    margin:25px auto;
+}
+
+.search{
+    width:100%;
+    padding:16px;
+    border:2px solid #0b82c9;
+    border-radius:12px;
+    font-size:17px;
+    outline:none;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin:25px 0;
+}
+
+.stat{
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 5px 20px #0002;
+}
+
+.stat strong{
+    display:block;
+    font-size:30px;
+    color:#0878bd;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 5px 20px #0002;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.number{
+    color:#0878bd;
+    font-weight:bold;
+}
+
+.badge{
+    display:inline-block;
+    background:#e0f5ff;
+    color:#006894;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:12px;
+    margin:8px 0;
+}
+
+.card h3{
+    margin:5px 0 10px;
+}
+
+.card p{
+    color:#555;
+    line-height:1.5;
+}
+
+button{
+    border:none;
+    background:#0878bd;
+    color:white;
+    padding:11px 18px;
+    border-radius:9px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-top:12px;
+}
+
+button:hover{
+    background:#045783;
+}
+
+.live{
+    margin-top:35px;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 25px #0002;
+}
+
+.live h2{
+    color:#0878bd;
+    margin-bottom:10px;
+}
+
+.info{
+    margin:10px 0;
+    line-height:1.6;
+}
+
+.panel{
+    background:#eef9ff;
+    padding:15px;
+    border-radius:12px;
+    margin:15px 0;
+}
+
+.controls{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:12px;
+}
+
+.controls input{
+    width:220px;
+}
+
+canvas{
+    display:block;
+    width:100%;
+    max-width:900px;
+    height:420px;
+    margin:20px auto;
+    border:2px solid #0988cf;
+    border-radius:15px;
+    background:white;
+}
+
+.value{
+    color:#075e91;
+    font-weight:bold;
+}
+
+footer{
+    margin-top:50px;
+    background:#02152d;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.hidden{
+    display:none;
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:28px;
+    }
+
+    canvas{
+        height:300px;
+    }
+
+    .controls input{
+        width:160px;
+    }
+}
+</style>
+
+
+
+
+<header>
+    <h1>🔬 Jitin Physics Lab</h1>
+    <p>50 Fully Interactive Physics Experiments</p>
+</header>
+
+<nav>
+    <a href="http://127.0.0.1:5500/Hello.html#home">Home</a>
+    <a href="http://127.0.0.1:5500/Hello.html#experiments">Experiments</a>
+    <a href="http://127.0.0.1:5500/Hello.html#lab">Live Lab</a>
+</nav>
+
+<div class="container" id="home">
+
+<input id="search" class="search" placeholder="🔎 Search any experiment...">
+
+<div class="stats">
+
+<div class="stat">
+<strong>50</strong>
+Experiments
+</div>
+
+<div class="stat">
+<strong>50/50</strong>
+Live Run
+</div>
+
+<div class="stat">
+<strong>8</strong>
+Physics Topics
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+Browser Based
+</div>
+
+</div>
+
+<h2 id="experiments">🧪 All Physics Experiments</h2>
+
+<br>
+
+<div id="cards" class="grid">
+
+<div class="card">
+
+<div class="number">
+Experiment 1
+</div>
+
+<div class="badge">
+Measurement
+</div>
+
+<h3>Vernier Calipers</h3>
+
+<p>Vernier calipers are used to measure small lengths accurately.</p>
+
+<button onclick="openExperiment(0)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 2
+</div>
+
+<div class="badge">
+Measurement
+</div>
+
+<h3>Screw Gauge</h3>
+
+<p>Screw gauge measures very small diameter.</p>
+
+<button onclick="openExperiment(1)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 3
+</div>
+
+<div class="badge">
+Mechanics
+</div>
+
+<h3>Simple Pendulum</h3>
+
+<p>The time period depends on the length of a pendulum.</p>
+
+<button onclick="openExperiment(2)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 4
+</div>
+
+<div class="badge">
+Mechanics
+</div>
+
+<h3>Newton's Second Law</h3>
+
+<p>Force produces acceleration in a body.</p>
+
+<button onclick="openExperiment(3)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 5
+</div>
+
+<div class="badge">
+Mechanics
+</div>
+
+<h3>Coefficient of Friction</h3>
+
+<p>Friction opposes relative motion.</p>
+
+<button onclick="openExperiment(4)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 6
+</div>
+
+<div class="badge">
+Mechanics
+</div>
+
+<h3>Projectile Motion</h3>
+
+<p>A projectile moves under gravity.</p>
+
+<button onclick="openExperiment(5)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 7
+</div>
+
+<div class="badge">
+Elasticity
+</div>
+
+<h3>Hooke's Law</h3>
+
+<p>Extension is proportional to force within elastic limit.</p>
+
+<button onclick="openExperiment(6)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 8
+</div>
+
+<div class="badge">
+Elasticity
+</div>
+
+<h3>Young's Modulus</h3>
+
+<p>Young's modulus relates stress and strain.</p>
+
+<button onclick="openExperiment(7)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 9
+</div>
+
+<div class="badge">
+Properties of Matter
+</div>
+
+<h3>Surface Tension</h3>
+
+<p>Liquid surfaces behave like stretched membranes.</p>
+
+<button onclick="openExperiment(8)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 10
+</div>
+
+<div class="badge">
+Properties of Matter
+</div>
+
+<h3>Viscosity</h3>
+
+<p>Viscosity represents resistance to fluid flow.</p>
+
+<button onclick="openExperiment(9)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 11
+</div>
+
+<div class="badge">
+Fluid Mechanics
+</div>
+
+<h3>Archimedes Principle</h3>
+
+<p>An immersed body experiences an upward force.</p>
+
+<button onclick="openExperiment(10)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 12
+</div>
+
+<div class="badge">
+Fluid Mechanics
+</div>
+
+<h3>Bernoulli's Theorem</h3>
+
+<p>Pressure and velocity are related in flowing fluid.</p>
+
+<button onclick="openExperiment(11)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 13
+</div>
+
+<div class="badge">
+Fluid Mechanics
+</div>
+
+<h3>Pascal's Law</h3>
+
+<p>Pressure applied to enclosed fluid is transmitted equally.</p>
+
+<button onclick="openExperiment(12)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 14
+</div>
+
+<div class="badge">
+Heat
+</div>
+
+<h3>Newton's Law of Cooling</h3>
+
+<p>Hot objects cool towards surrounding temperature.</p>
+
+<button onclick="openExperiment(13)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 15
+</div>
+
+<div class="badge">
+Heat
+</div>
+
+<h3>Specific Heat</h3>
+
+<p>Specific heat is heat required for temperature change.</p>
+
+<button onclick="openExperiment(14)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 16
+</div>
+
+<div class="badge">
+Heat
+</div>
+
+<h3>Latent Heat</h3>
+
+<p>Latent heat changes the state of matter.</p>
+
+<button onclick="openExperiment(15)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 17
+</div>
+
+<div class="badge">
+Heat
+</div>
+
+<h3>Linear Expansion</h3>
+
+<p>Solids expand when heated.</p>
+
+<button onclick="openExperiment(16)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 18
+</div>
+
+<div class="badge">
+Heat
+</div>
+
+<h3>Thermal Conductivity</h3>
+
+<p>Different materials conduct heat differently.</p>
+
+<button onclick="openExperiment(17)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 19
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Ohm's Law</h3>
+
+<p>Current is proportional to voltage at constant temperature.</p>
+
+<button onclick="openExperiment(18)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 20
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Series Resistance</h3>
+
+<p>Series resistances add together.</p>
+
+<button onclick="openExperiment(19)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 21
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Parallel Resistance</h3>
+
+<p>Parallel resistance follows reciprocal relation.</p>
+
+<button onclick="openExperiment(20)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 22
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Kirchhoff Current Law</h3>
+
+<p>Current entering a junction equals current leaving.</p>
+
+<button onclick="openExperiment(21)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 23
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Kirchhoff Voltage Law</h3>
+
+<p>Voltage changes around a closed loop sum to zero.</p>
+
+<button onclick="openExperiment(22)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 24
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Wheatstone Bridge</h3>
+
+<p>Bridge balance can determine unknown resistance.</p>
+
+<button onclick="openExperiment(23)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 25
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Meter Bridge</h3>
+
+<p>Meter bridge uses Wheatstone bridge principle.</p>
+
+<button onclick="openExperiment(24)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 26
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Potentiometer</h3>
+
+<p>Potential difference is proportional to balancing length.</p>
+
+<button onclick="openExperiment(25)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 27
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Internal Resistance of Cell</h3>
+
+<p>A practical cell has internal resistance.</p>
+
+<button onclick="openExperiment(26)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 28
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Capacitor Charging</h3>
+
+<p>A capacitor stores electrical energy.</p>
+
+<button onclick="openExperiment(27)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 29
+</div>
+
+<div class="badge">
+Electricity
+</div>
+
+<h3>Capacitor Discharging</h3>
+
+<p>A charged capacitor loses charge through a resistor.</p>
+
+<button onclick="openExperiment(28)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 30
+</div>
+
+<div class="badge">
+Magnetism
+</div>
+
+<h3>Magnetic Field of Straight Wire</h3>
+
+<p>Current in a wire creates magnetic field.</p>
+
+<button onclick="openExperiment(29)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 31
+</div>
+
+<div class="badge">
+Magnetism
+</div>
+
+<h3>Magnetic Field of Solenoid</h3>
+
+<p>A solenoid produces a magnetic field.</p>
+
+<button onclick="openExperiment(30)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 32
+</div>
+
+<div class="badge">
+Magnetism
+</div>
+
+<h3>Earth's Magnetic Field</h3>
+
+<p>Earth has its own magnetic field.</p>
+
+<button onclick="openExperiment(31)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 33
+</div>
+
+<div class="badge">
+Electromagnetism
+</div>
+
+<h3>Electromagnetic Induction</h3>
+
+<p>Changing magnetic flux produces EMF.</p>
+
+<button onclick="openExperiment(32)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 34
+</div>
+
+<div class="badge">
+Electromagnetism
+</div>
+
+<h3>Faraday's Law</h3>
+
+<p>Induced EMF depends on change of magnetic flux.</p>
+
+<button onclick="openExperiment(33)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 35
+</div>
+
+<div class="badge">
+Electromagnetism
+</div>
+
+<h3>Lenz's Law</h3>
+
+<p>Induced current opposes the change causing it.</p>
+
+<button onclick="openExperiment(34)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 36
+</div>
+
+<div class="badge">
+AC Electricity
+</div>
+
+<h3>Transformer</h3>
+
+<p>Transformer changes AC voltage.</p>
+
+<button onclick="openExperiment(35)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 37
+</div>
+
+<div class="badge">
+Electromagnetism
+</div>
+
+<h3>AC Generator</h3>
+
+<p>Mechanical energy is converted into electrical energy.</p>
+
+<button onclick="openExperiment(36)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 38
+</div>
+
+<div class="badge">
+Electromagnetism
+</div>
+
+<h3>DC Motor</h3>
+
+<p>Current carrying coil experiences torque.</p>
+
+<button onclick="openExperiment(37)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 39
+</div>
+
+<div class="badge">
+Optics
+</div>
+
+<h3>Reflection of Light</h3>
+
+<p>Angle of incidence equals angle of reflection.</p>
+
+<button onclick="openExperiment(38)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 40
+</div>
+
+<div class="badge">
+Optics
+</div>
+
+<h3>Refraction of Light</h3>
+
+<p>Light changes direction between media.</p>
+
+<button onclick="openExperiment(39)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 41
+</div>
+
+<div class="badge">
+Optics
+</div>
+
+<h3>Lens Formula</h3>
+
+<p>Image position depends on object and focal distances.</p>
+
+<button onclick="openExperiment(40)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 42
+</div>
+
+<div class="badge">
+Optics
+</div>
+
+<h3>Convex Lens</h3>
+
+<p>Convex lens converges light rays.</p>
+
+<button onclick="openExperiment(41)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 43
+</div>
+
+<div class="badge">
+Optics
+</div>
+
+<h3>Concave Lens</h3>
+
+<p>Concave lens diverges light rays.</p>
+
+<button onclick="openExperiment(42)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 44
+</div>
+
+<div class="badge">
+Optics
+</div>
+
+<h3>Prism Experiment</h3>
+
+<p>A prism deviates and disperses light.</p>
+
+<button onclick="openExperiment(43)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 45
+</div>
+
+<div class="badge">
+Wave Optics
+</div>
+
+<h3>Diffraction of Light</h3>
+
+<p>Light spreads after passing through a narrow slit.</p>
+
+<button onclick="openExperiment(44)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 46
+</div>
+
+<div class="badge">
+Wave Optics
+</div>
+
+<h3>Interference of Light</h3>
+
+<p>Overlapping coherent waves produce fringes.</p>
+
+<button onclick="openExperiment(45)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 47
+</div>
+
+<div class="badge">
+Wave Optics
+</div>
+
+<h3>Polarization</h3>
+
+<p>Polarization demonstrates transverse nature of light.</p>
+
+<button onclick="openExperiment(46)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 48
+</div>
+
+<div class="badge">
+Modern Physics
+</div>
+
+<h3>Photoelectric Effect</h3>
+
+<p>Light can eject electrons from a metal surface.</p>
+
+<button onclick="openExperiment(47)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 49
+</div>
+
+<div class="badge">
+Modern Physics
+</div>
+
+<h3>Hydrogen Spectrum</h3>
+
+<p>Hydrogen emits discrete spectral lines.</p>
+
+<button onclick="openExperiment(48)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 50
+</div>
+
+<div class="badge">
+Nuclear Physics
+</div>
+
+<h3>Radioactive Decay</h3>
+
+<p>Radioactive activity decreases exponentially.</p>
+
+<button onclick="openExperiment(49)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 51
+</div>
+
+<div class="badge">
+Nuclear Physics
+</div>
+
+<h3>Half Life</h3>
+
+<p>Half life is the time for half nuclei to decay.</p>
+
+<button onclick="openExperiment(50)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+<div class="number">
+Experiment 52
+</div>
+
+<div class="badge">
+Sound
+</div>
+
+<h3>Sonometer</h3>
+
+<p>Sonometer demonstrates relation between frequency and tension.</p>
+
+<button onclick="openExperiment(51)">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+</div>
+
+<div id="lab" class="live hidden">
+
+<h2 id="labTitle">Live Experiment</h2>
+
+<div class="info">
+<b>Theory:</b>
+<span id="theory"></span>
+</div>
+
+<div class="info">
+<b>Formula:</b>
+<span id="formula"></span>
+</div>
+
+<div class="info">
+<b>Apparatus:</b>
+<span id="apparatus"></span>
+</div>
+
+<div class="info">
+<b>Procedure:</b>
+<span id="procedure"></span>
+</div>
+
+<div class="info">
+<b>Result:</b>
+<span id="result"></span>
+</div>
+
+<div class="panel">
+
+<div class="controls">
+
+<label>
+Experiment Value:
+</label>
+
+<input type="range" id="slider" min="1" max="100" value="50">
+
+<span class="value" id="value">50</span>
+
+<button onclick="startExperiment()">
+▶ Start
+</button>
+
+<button onclick="stopExperiment()">
+⏸ Stop
+</button>
+
+<button onclick="resetExperiment()">
+↻ Reset
+</button>
+
+</div>
+
+</div>
+
+<canvas id="canvas" width="900" height="420"></canvas>
+
+<button onclick="closeLab()">
+✖ Close Experiment
+</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<h2>Jitin Physics Lab</h2>
+
+<p>Interactive Physics Laboratory</p>
+
+<p>HTML + CSS + JavaScript</p>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   50 EXPERIMENTS
+===================================================== */
+
+const experiments = [
+
+{
+name:"Vernier Calipers",
+topic:"Measurement",
+formula:"Least Count = 1 MSD - 1 VSD",
+theory:"Vernier calipers are used to measure small lengths accurately.",
+apparatus:"Vernier calipers and object.",
+procedure:"Place the object between the jaws and observe the scales.",
+result:"Object dimension is measured.",
+type:"vernier"
+},
+
+{
+name:"Screw Gauge",
+topic:"Measurement",
+formula:"Pitch = Distance / Number of rotations",
+theory:"Screw gauge measures very small diameter.",
+apparatus:"Screw gauge and wire.",
+procedure:"Place wire between anvil and spindle.",
+result:"Diameter is measured.",
+type:"screw"
+},
+
+{
+name:"Simple Pendulum",
+topic:"Mechanics",
+formula:"T = 2π√(L/g)",
+theory:"The time period depends on the length of a pendulum.",
+apparatus:"Stand, thread, bob and stopwatch.",
+procedure:"Change length and observe oscillation.",
+result:"Time period is determined.",
+type:"pendulum"
+},
+
+{
+name:"Newton's Second Law",
+topic:"Mechanics",
+formula:"F = ma",
+theory:"Force produces acceleration in a body.",
+apparatus:"Trolley, pulley and weights.",
+procedure:"Apply different forces to the trolley.",
+result:"F = ma is verified.",
+type:"newton"
+},
+
+{
+name:"Coefficient of Friction",
+topic:"Mechanics",
+formula:"μ = F/N",
+theory:"Friction opposes relative motion.",
+apparatus:"Block and spring balance.",
+procedure:"Pull the block and observe limiting friction.",
+result:"Coefficient of friction is calculated.",
+type:"friction"
+},
+
+{
+name:"Projectile Motion",
+topic:"Mechanics",
+formula:"R = u²sin2θ/g",
+theory:"A projectile moves under gravity.",
+apparatus:"Projectile launcher.",
+procedure:"Launch projectile at different angles.",
+result:"Projectile path is observed.",
+type:"projectile"
+},
+
+{
+name:"Hooke's Law",
+topic:"Elasticity",
+formula:"F = kx",
+theory:"Extension is proportional to force within elastic limit.",
+apparatus:"Spring and weights.",
+procedure:"Add weights and observe extension.",
+result:"Hooke's law is verified.",
+type:"hooke"
+},
+
+{
+name:"Young's Modulus",
+topic:"Elasticity",
+formula:"Y = Stress / Strain",
+theory:"Young's modulus relates stress and strain.",
+apparatus:"Wire and weights.",
+procedure:"Apply load and measure extension.",
+result:"Young's modulus is calculated.",
+type:"young"
+},
+
+{
+name:"Surface Tension",
+topic:"Properties of Matter",
+formula:"T = F/l",
+theory:"Liquid surfaces behave like stretched membranes.",
+apparatus:"Capillary tube and liquid.",
+procedure:"Observe liquid surface behaviour.",
+result:"Surface tension is studied.",
+type:"surface"
+},
+
+{
+name:"Viscosity",
+topic:"Properties of Matter",
+formula:"η = 2r²(ρ-σ)g/9v",
+theory:"Viscosity represents resistance to fluid flow.",
+apparatus:"Viscometer and liquid.",
+procedure:"Observe movement of a sphere through liquid.",
+result:"Viscosity is calculated.",
+type:"viscosity"
+},
+
+{
+name:"Archimedes Principle",
+topic:"Fluid Mechanics",
+formula:"Buoyant Force = Weight of displaced fluid",
+theory:"An immersed body experiences an upward force.",
+apparatus:"Water, object and spring balance.",
+procedure:"Compare weight in air and water.",
+result:"Archimedes principle is verified.",
+type:"archimedes"
+},
+
+{
+name:"Bernoulli's Theorem",
+topic:"Fluid Mechanics",
+formula:"P + ½ρv² + ρgh = constant",
+theory:"Pressure and velocity are related in flowing fluid.",
+apparatus:"Venturimeter.",
+procedure:"Observe pressure at different sections.",
+result:"Bernoulli theorem is studied.",
+type:"bernoulli"
+},
+
+{
+name:"Pascal's Law",
+topic:"Fluid Mechanics",
+formula:"P = F/A",
+theory:"Pressure applied to enclosed fluid is transmitted equally.",
+apparatus:"Hydraulic press.",
+procedure:"Apply force on a piston.",
+result:"Pascal law is demonstrated.",
+type:"pascal"
+},
+
+{
+name:"Newton's Law of Cooling",
+topic:"Heat",
+formula:"dT/dt ∝ -(T-Ta)",
+theory:"Hot objects cool towards surrounding temperature.",
+apparatus:"Thermometer and hot water.",
+procedure:"Record temperature at regular intervals.",
+result:"Cooling curve is obtained.",
+type:"cooling"
+},
+
+{
+name:"Specific Heat",
+topic:"Heat",
+formula:"Q = mcΔT",
+theory:"Specific heat is heat required for temperature change.",
+apparatus:"Calorimeter and water.",
+procedure:"Measure temperature change.",
+result:"Specific heat is studied.",
+type:"specific"
+},
+
+{
+name:"Latent Heat",
+topic:"Heat",
+formula:"Q = mL",
+theory:"Latent heat changes the state of matter.",
+apparatus:"Ice and calorimeter.",
+procedure:"Observe melting process.",
+result:"Latent heat is calculated.",
+type:"latent"
+},
+
+{
+name:"Linear Expansion",
+topic:"Heat",
+formula:"ΔL = αLΔT",
+theory:"Solids expand when heated.",
+apparatus:"Metal rod and heater.",
+procedure:"Heat the rod and measure change in length.",
+result:"Expansion is observed.",
+type:"expansion"
+},
+
+{
+name:"Thermal Conductivity",
+topic:"Heat",
+formula:"Q/t = kAΔT/L",
+theory:"Different materials conduct heat differently.",
+apparatus:"Metal rod and heater.",
+procedure:"Heat one end of the rod.",
+result:"Thermal conductivity is studied.",
+type:"thermal"
+},
+
+{
+name:"Ohm's Law",
+topic:"Electricity",
+formula:"V = IR",
+theory:"Current is proportional to voltage at constant temperature.",
+apparatus:"Battery, resistor, ammeter and voltmeter.",
+procedure:"Change voltage and observe current.",
+result:"Ohm's law is verified.",
+type:"ohm"
+},
+
+{
+name:"Series Resistance",
+topic:"Electricity",
+formula:"R = R1 + R2 + R3",
+theory:"Series resistances add together.",
+apparatus:"Resistors and battery.",
+procedure:"Connect resistors in series.",
+result:"Equivalent resistance is determined.",
+type:"series"
+},
+
+{
+name:"Parallel Resistance",
+topic:"Electricity",
+formula:"1/R = 1/R1 + 1/R2",
+theory:"Parallel resistance follows reciprocal relation.",
+apparatus:"Resistors and battery.",
+procedure:"Connect resistors in parallel.",
+result:"Equivalent resistance is determined.",
+type:"parallel"
+},
+
+{
+name:"Kirchhoff Current Law",
+topic:"Electricity",
+formula:"ΣI = 0",
+theory:"Current entering a junction equals current leaving.",
+apparatus:"Battery and resistors.",
+procedure:"Measure branch currents.",
+result:"KCL is verified.",
+type:"kcl"
+},
+
+{
+name:"Kirchhoff Voltage Law",
+topic:"Electricity",
+formula:"ΣV = 0",
+theory:"Voltage changes around a closed loop sum to zero.",
+apparatus:"Battery and resistors.",
+procedure:"Measure voltage around the circuit.",
+result:"KVL is verified.",
+type:"kvl"
+},
+
+{
+name:"Wheatstone Bridge",
+topic:"Electricity",
+formula:"P/Q = R/S",
+theory:"Bridge balance can determine unknown resistance.",
+apparatus:"Resistors and galvanometer.",
+procedure:"Adjust bridge until balance.",
+result:"Unknown resistance is calculated.",
+type:"wheatstone"
+},
+
+{
+name:"Meter Bridge",
+topic:"Electricity",
+formula:"R/S = l/(100-l)",
+theory:"Meter bridge uses Wheatstone bridge principle.",
+apparatus:"Meter bridge and resistance box.",
+procedure:"Find balance point.",
+result:"Unknown resistance is calculated.",
+type:"meter"
+},
+
+{
+name:"Potentiometer",
+topic:"Electricity",
+formula:"V ∝ l",
+theory:"Potential difference is proportional to balancing length.",
+apparatus:"Potentiometer and galvanometer.",
+procedure:"Find null point.",
+result:"EMF is measured.",
+type:"potentiometer"
+},
+
+{
+name:"Internal Resistance of Cell",
+topic:"Electricity",
+formula:"E = V + Ir",
+theory:"A practical cell has internal resistance.",
+apparatus:"Cell, resistor and voltmeter.",
+procedure:"Measure terminal voltage.",
+result:"Internal resistance is calculated.",
+type:"internal"
+},
+
+{
+name:"Capacitor Charging",
+topic:"Electricity",
+formula:"Q = CV",
+theory:"A capacitor stores electrical energy.",
+apparatus:"Capacitor, resistor and battery.",
+procedure:"Charge capacitor through resistor.",
+result:"Charging curve is observed.",
+type:"capacitor"
+},
+
+{
+name:"Capacitor Discharging",
+topic:"Electricity",
+formula:"V = V₀e⁻ᵗ/RC",
+theory:"A charged capacitor loses charge through a resistor.",
+apparatus:"Capacitor and resistor.",
+procedure:"Observe voltage during discharge.",
+result:"Discharging curve is obtained.",
+type:"discharge"
+},
+
+{
+name:"Magnetic Field of Straight Wire",
+topic:"Magnetism",
+formula:"B = μ₀I/2πr",
+theory:"Current in a wire creates magnetic field.",
+apparatus:"Wire, battery and compass.",
+procedure:"Pass current through wire.",
+result:"Magnetic field is observed.",
+type:"wire"
+},
+
+{
+name:"Magnetic Field of Solenoid",
+topic:"Magnetism",
+formula:"B = μ₀nI",
+theory:"A solenoid produces a magnetic field.",
+apparatus:"Solenoid and battery.",
+procedure:"Change current and observe field.",
+result:"Magnetic field changes.",
+type:"solenoid"
+},
+
+{
+name:"Earth's Magnetic Field",
+topic:"Magnetism",
+formula:"B = μ₀H",
+theory:"Earth has its own magnetic field.",
+apparatus:"Compass.",
+procedure:"Observe magnetic direction.",
+result:"Direction of Earth's field is studied.",
+type:"earth"
+},
+
+{
+name:"Electromagnetic Induction",
+topic:"Electromagnetism",
+formula:"E = -dΦ/dt",
+theory:"Changing magnetic flux produces EMF.",
+apparatus:"Coil, magnet and galvanometer.",
+procedure:"Move magnet through coil.",
+result:"Induced current is observed.",
+type:"induction"
+},
+
+{
+name:"Faraday's Law",
+topic:"Electromagnetism",
+formula:"E = -N dΦ/dt",
+theory:"Induced EMF depends on change of magnetic flux.",
+apparatus:"Coil and magnet.",
+procedure:"Move magnet at different speeds.",
+result:"Induced EMF changes.",
+type:"faraday"
+},
+
+{
+name:"Lenz's Law",
+topic:"Electromagnetism",
+formula:"E = -dΦ/dt",
+theory:"Induced current opposes the change causing it.",
+apparatus:"Coil and magnet.",
+procedure:"Move magnet towards and away.",
+result:"Direction of induced current is observed.",
+type:"lenz"
+},
+
+{
+name:"Transformer",
+topic:"AC Electricity",
+formula:"Vs/Vp = Ns/Np",
+theory:"Transformer changes AC voltage.",
+apparatus:"Transformer.",
+procedure:"Compare primary and secondary voltages.",
+result:"Voltage transformation is observed.",
+type:"transformer"
+},
+
+{
+name:"AC Generator",
+topic:"Electromagnetism",
+formula:"E = NBAωsinωt",
+theory:"Mechanical energy is converted into electrical energy.",
+apparatus:"Coil and magnet.",
+procedure:"Rotate coil in magnetic field.",
+result:"AC voltage is produced.",
+type:"generator"
+},
+
+{
+name:"DC Motor",
+topic:"Electromagnetism",
+formula:"τ = NIABsinθ",
+theory:"Current carrying coil experiences torque.",
+apparatus:"Motor, battery and magnet.",
+procedure:"Pass current through motor.",
+result:"Motor rotates.",
+type:"motor"
+},
+
+{
+name:"Reflection of Light",
+topic:"Optics",
+formula:"i = r",
+theory:"Angle of incidence equals angle of reflection.",
+apparatus:"Mirror and ray box.",
+procedure:"Observe incident and reflected rays.",
+result:"Law of reflection is verified.",
+type:"reflection"
+},
+
+{
+name:"Refraction of Light",
+topic:"Optics",
+formula:"n = sin i/sin r",
+theory:"Light changes direction between media.",
+apparatus:"Glass slab and ray box.",
+procedure:"Pass light through glass.",
+result:"Snell's law is observed.",
+type:"refraction"
+},
+
+{
+name:"Lens Formula",
+topic:"Optics",
+formula:"1/f = 1/v - 1/u",
+theory:"Image position depends on object and focal distances.",
+apparatus:"Convex lens and screen.",
+procedure:"Move screen to obtain image.",
+result:"Lens formula is studied.",
+type:"lens"
+},
+
+{
+name:"Convex Lens",
+topic:"Optics",
+formula:"1/f = 1/v - 1/u",
+theory:"Convex lens converges light rays.",
+apparatus:"Convex lens and screen.",
+procedure:"Focus parallel rays.",
+result:"Focal length is measured.",
+type:"convex"
+},
+
+{
+name:"Concave Lens",
+topic:"Optics",
+formula:"1/f = 1/v - 1/u",
+theory:"Concave lens diverges light rays.",
+apparatus:"Concave lens and convex lens.",
+procedure:"Determine focal length by combination.",
+result:"Focal length is calculated.",
+type:"concave"
+},
+
+{
+name:"Prism Experiment",
+topic:"Optics",
+formula:"n = sin((A+D)/2)/sin(A/2)",
+theory:"A prism deviates and disperses light.",
+apparatus:"Glass prism and ray box.",
+procedure:"Pass light through prism.",
+result:"Deviation is observed.",
+type:"prism"
+},
+
+{
+name:"Diffraction of Light",
+topic:"Wave Optics",
+formula:"a sinθ = nλ",
+theory:"Light spreads after passing through a narrow slit.",
+apparatus:"Laser and slit.",
+procedure:"Observe diffraction pattern.",
+result:"Diffraction pattern is obtained.",
+type:"diffraction"
+},
+
+{
+name:"Interference of Light",
+topic:"Wave Optics",
+formula:"β = λD/d",
+theory:"Overlapping coherent waves produce fringes.",
+apparatus:"Laser and double slit.",
+procedure:"Observe bright and dark fringes.",
+result:"Interference pattern is observed.",
+type:"interference"
+},
+
+{
+name:"Polarization",
+topic:"Wave Optics",
+formula:"I = I₀cos²θ",
+theory:"Polarization demonstrates transverse nature of light.",
+apparatus:"Polaroids.",
+procedure:"Rotate analyzer.",
+result:"Malus law is observed.",
+type:"polarization"
+},
+
+{
+name:"Photoelectric Effect",
+topic:"Modern Physics",
+formula:"Kmax = hν - φ",
+theory:"Light can eject electrons from a metal surface.",
+apparatus:"Photoelectric cell.",
+procedure:"Change light frequency.",
+result:"Photoelectric effect is studied.",
+type:"photoelectric"
+},
+
+{
+name:"Hydrogen Spectrum",
+topic:"Modern Physics",
+formula:"1/λ = R(1/n₁² - 1/n₂²)",
+theory:"Hydrogen emits discrete spectral lines.",
+apparatus:"Discharge tube and spectrometer.",
+procedure:"Observe spectral lines.",
+result:"Hydrogen spectrum is studied.",
+type:"hydrogen"
+},
+
+{
+name:"Radioactive Decay",
+topic:"Nuclear Physics",
+formula:"N = N₀e⁻λt",
+theory:"Radioactive activity decreases exponentially.",
+apparatus:"Radiation detector.",
+procedure:"Observe count rate with time.",
+result:"Decay curve is obtained.",
+type:"radioactive"
+},
+
+{
+name:"Half Life",
+topic:"Nuclear Physics",
+formula:"T½ = 0.693/λ",
+theory:"Half life is the time for half nuclei to decay.",
+apparatus:"Radiation detector.",
+procedure:"Plot activity against time.",
+result:"Half life is determined.",
+type:"halflife"
+},
+
+{
+name:"Sonometer",
+topic:"Sound",
+formula:"f = 1/2L √(T/μ)",
+theory:"Sonometer demonstrates relation between frequency and tension.",
+apparatus:"Sonometer and tuning fork.",
+procedure:"Adjust wire until resonance.",
+result:"Frequency relation is studied.",
+type:"sonometer"
+}
+
+];
+
+
+/* =====================================================
+   DISPLAY CARDS
+===================================================== */
+
+const cards = document.getElementById("cards");
+
+function showCards(data){
+
+cards.innerHTML="";
+
+data.forEach((e,index)=>{
+
+const originalIndex = experiments.indexOf(e);
+
+cards.innerHTML += `
+
+<div class="card">
+
+<div class="number">
+Experiment ${originalIndex+1}
+</div>
+
+<div class="badge">
+${e.topic}
+</div>
+
+<h3>${e.name}</h3>
+
+<p>${e.theory}</p>
+
+<button onclick="openExperiment(${originalIndex})">
+▶ Run Live Experiment
+</button>
+
+</div>
+
+`;
+
+});
+
+}
+
+showCards(experiments);
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+document.getElementById("search").addEventListener(
+"input",
+function(){
+
+let text=this.value.toLowerCase();
+
+let result=experiments.filter(e=>
+
+e.name.toLowerCase().includes(text) ||
+e.topic.toLowerCase().includes(text)
+
+);
+
+showCards(result);
+
+});
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+let currentExperiment=null;
+
+let animation=null;
+
+let running=false;
+
+let time=0;
+
+
+/* =====================================================
+   OPEN EXPERIMENT
+===================================================== */
+
+function openExperiment(index){
+
+currentExperiment=experiments[index];
+
+document.getElementById("lab").classList.remove("hidden");
+
+document.getElementById("labTitle").innerText=
+"🔬 "+(index+1)+". "+currentExperiment.name;
+
+document.getElementById("theory").innerText=
+currentExperiment.theory;
+
+document.getElementById("formula").innerText=
+currentExperiment.formula;
+
+document.getElementById("apparatus").innerText=
+currentExperiment.apparatus;
+
+document.getElementById("procedure").innerText=
+currentExperiment.procedure;
+
+document.getElementById("result").innerText=
+currentExperiment.result;
+
+document.getElementById("slider").value=50;
+
+time=0;
+
+running=false;
+
+draw();
+
+document.getElementById("lab").scrollIntoView({
+behavior:"smooth"
+});
+
+}
+
+
+/* =====================================================
+   START
+===================================================== */
+
+function startExperiment(){
+
+running=true;
+
+animate();
+
+}
+
+
+/* =====================================================
+   STOP
+===================================================== */
+
+function stopExperiment(){
+
+running=false;
+
+if(animation){
+
+cancelAnimationFrame(animation);
+
+}
+
+}
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+function resetExperiment(){
+
+running=false;
+
+time=0;
+
+document.getElementById("slider").value=50;
+
+draw();
+
+}
+
+
+/* =====================================================
+   CLOSE
+===================================================== */
+
+function closeLab(){
+
+stopExperiment();
+
+document.getElementById("lab").classList.add("hidden");
+
+}
+
+
+/* =====================================================
+   SLIDER
+===================================================== */
+
+document.getElementById("slider").addEventListener(
+"input",
+function(){
+
+document.getElementById("value").innerText=this.value;
+
+draw();
+
+});
+
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+function animate(){
+
+if(!running)return;
+
+time+=0.03;
+
+draw();
+
+animation=requestAnimationFrame(animate);
+
+}
+
+
+/* =====================================================
+   DRAW ENGINE
+===================================================== */
+
+function draw(){
+
+if(!currentExperiment)return;
+
+const canvas=document.getElementById("canvas");
+
+const ctx=canvas.getContext("2d");
+
+const w=canvas.width;
+
+const h=canvas.height;
+
+const v=Number(document.getElementById("slider").value);
+
+ctx.clearRect(0,0,w,h);
+
+ctx.fillStyle="#17202a";
+
+ctx.font="22px Arial";
+
+ctx.fillText(
+currentExperiment.name,
+25,
+35
+);
+
+ctx.font="16px Arial";
+
+ctx.fillText(
+"Live Value: "+v,
+25,
+65
+);
+
+
+/* Background grid */
+
+ctx.strokeStyle="#e3edf4";
+
+for(let x=0;x<w;x+=50){
+
+ctx.beginPath();
+
+ctx.moveTo(x,80);
+
+ctx.lineTo(x,h-30);
+
+ctx.stroke();
+
+}
+
+for(let y=80;y<h-30;y+=50){
+
+ctx.beginPath();
+
+ctx.moveTo(0,y);
+
+ctx.lineTo(w,y);
+
+ctx.stroke();
+
+}
+
+ctx.strokeStyle="#0878bd";
+
+let type=currentExperiment.type;
+
+
+/* -----------------------------------------------------
+   1 VERNIER
+----------------------------------------------------- */
+
+if(type==="vernier"){
+
+drawRuler(ctx,v);
+
+}
+
+
+/* SCREW GAUGE */
+
+else if(type==="screw"){
+
+drawScrew(ctx,v);
+
+}
+
+
+/* PENDULUM */
+
+else if(type==="pendulum"){
+
+let angle=Math.sin(time)*0.8;
+
+let x=450+170*Math.sin(angle);
+
+let y=120+170*Math.cos(angle);
+
+ctx.beginPath();
+
+ctx.moveTo(450,120);
+
+ctx.lineTo(x,y);
+
+ctx.stroke();
+
+ctx.beginPath();
+
+ctx.arc(x,y,25,0,Math.PI*2);
+
+ctx.fillStyle="#0878bd";
+
+ctx.fill();
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Length = "+v,
+350,
+350
+);
+
+}
+
+
+/* NEWTON */
+
+else if(type==="newton"){
+
+let x=100+(v*6);
+
+ctx.fillStyle="#0878bd";
+
+ctx.fillRect(x,240,80,60);
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"F = ma",
+400,
+120
+);
+
+ctx.fillText(
+"Force = "+v+" N",
+350,
+350
+);
+
+}
+
+
+/* FRICTION */
+
+else if(type==="friction"){
+
+ctx.fillStyle="#0878bd";
+
+ctx.fillRect(400,230,120,70);
+
+ctx.strokeStyle="#17202a";
+
+ctx.beginPath();
+
+ctx.moveTo(100,300);
+
+ctx.lineTo(400,300);
+
+ctx.stroke();
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Friction = "+v,
+350,
+350
+);
+
+}
+
+
+/* PROJECTILE */
+
+else if(type==="projectile"){
+
+ctx.beginPath();
+
+for(let x=0;x<650;x++){
+
+let y=
+300 -
+(v/100)*1.8*x +
+0.002*x*x;
+
+if(x===0)
+ctx.moveTo(80+x,y);
+else
+ctx.lineTo(80+x,y);
+
+}
+
+ctx.stroke();
+
+}
+
+
+/* HOOKE */
+
+else if(type==="hooke"){
+
+ctx.beginPath();
+
+ctx.moveTo(450,90);
+
+for(let y=90;y<250;y+=10){
+
+let x=
+450+
+(y%20===0?20:-20);
+
+ctx.lineTo(x,y);
+
+}
+
+ctx.stroke();
+
+ctx.fillText(
+"Extension = "+v+" units",
+330,
+350
+);
+
+}
+
+
+/* YOUNG */
+
+else if(type==="young"){
+
+drawGraph(ctx,v);
+
+}
+
+
+/* SURFACE */
+
+else if(type==="surface"){
+
+ctx.beginPath();
+
+ctx.arc(
+450,
+230,
+100,
+Math.PI,
+2*Math.PI
+);
+
+ctx.stroke();
+
+ctx.fillText(
+"Surface tension = "+v,
+330,
+350
+);
+
+}
+
+
+/* VISCOSITY */
+
+else if(type==="viscosity"){
+
+let y=100+v*2;
+
+ctx.fillStyle="#74c6e8";
+
+ctx.fillRect(300,80,300,260);
+
+ctx.fillStyle="#0878bd";
+
+ctx.beginPath();
+
+ctx.arc(450,y,20,0,Math.PI*2);
+
+ctx.fill();
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Velocity = "+v,
+350,
+370
+);
+
+}
+
+
+/* ARCHIMEDES */
+
+else if(type==="archimedes"){
+
+ctx.fillStyle="#8ed9f5";
+
+ctx.fillRect(200,160,500,180);
+
+ctx.fillStyle="#0878bd";
+
+ctx.fillRect(400,220,100,80);
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Buoyant Force = "+v,
+330,
+120
+);
+
+}
+
+
+/* BERNOULLI */
+
+else if(type==="bernoulli"){
+
+ctx.beginPath();
+
+ctx.moveTo(100,180);
+
+ctx.quadraticCurveTo(
+400,80,
+700,180
+);
+
+ctx.stroke();
+
+ctx.beginPath();
+
+ctx.moveTo(100,260);
+
+ctx.quadraticCurveTo(
+400,350,
+700,260
+);
+
+ctx.stroke();
+
+ctx.fillText(
+"Fluid velocity = "+v,
+330,
+380
+);
+
+}
+
+
+/* PASCAL */
+
+else if(type==="pascal"){
+
+ctx.strokeRect(200,230,150,100);
+
+ctx.strokeRect(550,150,150,180);
+
+ctx.fillText(
+"Pressure = "+v+" Pa",
+350,
+100
+);
+
+}
+
+
+/* COOLING */
+
+else if(type==="cooling"){
+
+drawDecay(ctx,v);
+
+}
+
+
+/* SPECIFIC HEAT */
+
+else if(type==="specific"){
+
+drawThermometer(ctx,v);
+
+}
+
+
+/* LATENT HEAT */
+
+else if(type==="latent"){
+
+ctx.fillStyle="#9ee8ff";
+
+ctx.fillRect(350,130,200,200);
+
+ctx.fillStyle="#0878bd";
+
+for(let i=0;i<15;i++){
+
+ctx.beginPath();
+
+ctx.arc(
+380+Math.random()*140,
+160+Math.random()*140,
+8,
+0,
+Math.PI*2
+);
+
+ctx.fill();
+
+}
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Heat = "+v,
+390,
+370
+);
+
+}
+
+
+/* EXPANSION */
+
+else if(type==="expansion"){
+
+ctx.fillStyle="#0878bd";
+
+ctx.fillRect(
+150,
+220,
+500+v*2,
+30
+);
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Expansion = "+v,
+370,
+320
+);
+
+}
+
+
+/* THERMAL */
+
+else if(type==="thermal"){
+
+let gradient=ctx.createLinearGradient(
+150,0,750,0
+);
+
+gradient.addColorStop(0,"#4cc9f0");
+
+gradient.addColorStop(1,"#ff6b35");
+
+ctx.fillStyle=gradient;
+
+ctx.fillRect(150,180,600,100);
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Heat Flow",
+400,
+330
+);
+
+}
+
+
+/* OHM */
+
+else if(type==="ohm"){
+
+drawLineGraph(
+ctx,
+v,
+"V = IR"
+);
+
+}
+
+
+/* SERIES */
+
+else if(type==="series"){
+
+drawCircuit(ctx,false,v);
+
+}
+
+
+/* PARALLEL */
+
+else if(type==="parallel"){
+
+drawCircuit(ctx,true,v);
+
+}
+
+
+/* KCL */
+
+else if(type==="kcl"){
+
+drawKCL(ctx,v);
+
+}
+
+
+/* KVL */
+
+else if(type==="kvl"){
+
+drawKVL(ctx,v);
+
+}
+
+
+/* WHEATSTONE */
+
+else if(type==="wheatstone"){
+
+drawBridge(ctx,v);
+
+}
+
+
+/* METER */
+
+else if(type==="meter"){
+
+drawMeter(ctx,v);
+
+}
+
+
+/* POTENTIOMETER */
+
+else if(type==="potentiometer"){
+
+drawPot(ctx,v);
+
+}
+
+
+/* INTERNAL */
+
+else if(type==="internal"){
+
+drawLineGraph(
+ctx,
+v,
+"E = V + Ir"
+);
+
+}
+
+
+/* CAPACITOR */
+
+else if(type==="capacitor"){
+
+drawCharging(ctx,v);
+
+}
+
+
+/* DISCHARGE */
+
+else if(type==="discharge"){
+
+drawDischarge(ctx,v);
+
+}
+
+
+/* STRAIGHT WIRE */
+
+else if(type==="wire"){
+
+drawMagneticField(ctx,v);
+
+}
+
+
+/* SOLENOID */
+
+else if(type==="solenoid"){
+
+drawSolenoid(ctx,v);
+
+}
+
+
+/* EARTH */
+
+else if(type==="earth"){
+
+drawEarth(ctx,v);
+
+}
+
+
+/* INDUCTION */
+
+else if(type==="induction"){
+
+drawInduction(ctx,v);
+
+}
+
+
+/* FARADAY */
+
+else if(type==="faraday"){
+
+drawInduction(ctx,v);
+
+}
+
+
+/* LENZ */
+
+else if(type==="lenz"){
+
+drawInduction(ctx,v);
+
+}
+
+
+/* TRANSFORMER */
+
+else if(type==="transformer"){
+
+drawTransformer(ctx,v);
+
+}
+
+
+/* GENERATOR */
+
+else if(type==="generator"){
+
+drawGenerator(ctx);
+
+}
+
+
+/* MOTOR */
+
+else if(type==="motor"){
+
+drawMotor(ctx);
+
+}
+
+
+/* REFLECTION */
+
+else if(type==="reflection"){
+
+drawReflection(ctx,v);
+
+}
+
+
+/* REFRACTION */
+
+else if(type==="refraction"){
+
+drawRefraction(ctx,v);
+
+}
+
+
+/* LENS */
+
+else if(
+type==="lens" ||
+type==="convex" ||
+type==="concave"
+){
+
+drawLens(ctx,v,type);
+
+}
+
+
+/* PRISM */
+
+else if(type==="prism"){
+
+drawPrism(ctx,v);
+
+}
+
+
+/* DIFFRACTION */
+
+else if(type==="diffraction"){
+
+drawDiffraction(ctx,v);
+
+}
+
+
+/* INTERFERENCE */
+
+else if(type==="interference"){
+
+drawInterference(ctx,v);
+
+}
+
+
+/* POLARIZATION */
+
+else if(type==="polarization"){
+
+drawPolarization(ctx,v);
+
+}
+
+
+/* PHOTOELECTRIC */
+
+else if(type==="photoelectric"){
+
+drawPhotoelectric(ctx,v);
+
+}
+
+
+/* HYDROGEN */
+
+else if(type==="hydrogen"){
+
+drawSpectrum(ctx,v);
+
+}
+
+
+/* RADIOACTIVE */
+
+else if(
+type==="radioactive" ||
+type==="halflife"
+){
+
+drawDecay(ctx,v);
+
+}
+
+
+/* SONOMETER */
+
+else if(type==="sonometer"){
+
+drawSonometer(ctx,v);
+
+}
+
+}
+
+
+/* =====================================================
+   DRAWING FUNCTIONS
+===================================================== */
+
+function drawRuler(ctx,v){
+
+ctx.strokeStyle="#17202a";
+
+ctx.beginPath();
+
+ctx.moveTo(100,250);
+
+ctx.lineTo(800,250);
+
+ctx.stroke();
+
+for(let i=0;i<35;i++){
+
+let x=100+i*20;
+
+ctx.beginPath();
+
+ctx.moveTo(x,250);
+
+ctx.lineTo(
+x,
+i%5===0?210:225
+);
+
+ctx.stroke();
+
+}
+
+ctx.fillText(
+"Vernier reading = "+v,
+330,
+320
+);
+
+}
+
+
+function drawScrew(ctx,v){
+
+ctx.strokeRect(250,170,400,100);
+
+for(let x=260;x<640;x+=20){
+
+ctx.beginPath();
+
+ctx.moveTo(x,170);
+
+ctx.lineTo(x,270);
+
+ctx.stroke();
+
+}
+
+ctx.fillText(
+"Screw Gauge reading = "+v,
+300,
+330
+);
+
+}
+
+
+function drawGraph(ctx,v){
+
+ctx.beginPath();
+
+for(let x=80;x<800;x++){
+
+let y=
+300 -
+Math.min(220,x*v/500);
+
+if(x===80)
+ctx.moveTo(x,y);
+else
+ctx.lineTo(x,y);
+
+}
+
+ctx.stroke();
+
+}
+
+
+function drawLineGraph(ctx,v,text){
+
+ctx.beginPath();
+
+for(let x=80;x<800;x++){
+
+let y=300-(x-80)*v/250;
+
+if(y<80)y=80;
+
+if(x===80)
+ctx.moveTo(x,y);
+else
+ctx.lineTo(x,y);
+
+}
+
+ctx.stroke();
+
+ctx.fillText(text,400,100);
+
+}
+
+
+function drawDecay(ctx,v){
+
+ctx.beginPath();
+
+for(let x=0;x<700;x++){
+
+let y=
+100+
+200*Math.exp(-x/(80+v*2));
+
+if(x===0)
+ctx.moveTo(100+x,y);
+else
+ctx.lineTo(100+x,y);
+
+}
+
+ctx.stroke();
+
+ctx.fillText(
+"Decay / Cooling curve",
+330,
+350
+);
+
+}
+
+
+function drawThermometer(ctx,v){
+
+ctx.strokeRect(420,100,40,230);
+
+ctx.beginPath();
+
+ctx.arc(
+440,
+330,
+35,
+0,
+Math.PI*2
+);
+
+ctx.fillStyle="#e74c3c";
+
+ctx.fill();
+
+ctx.fillRect(
+425,
+100+(230-v*2),
+30,
+v*2
+);
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Temperature = "+v+" °C",
+330,
+380
+);
+
+}
+
+
+function drawCircuit(ctx,parallel,v){
+
+ctx.strokeStyle="#17202a";
+
+if(!parallel){
+
+ctx.strokeRect(250,170,100,60);
+
+ctx.strokeRect(500,170,100,60);
+
+ctx.beginPath();
+
+ctx.moveTo(100,200);
+ctx.lineTo(250,200);
+ctx.moveTo(350,200);
+ctx.lineTo(500,200);
+ctx.moveTo(600,200);
+ctx.lineTo(750,200);
+
+ctx.stroke();
+
+}else{
+
+ctx.beginPath();
+
+ctx.moveTo(100,130);
+ctx.lineTo(250,130);
+ctx.lineTo(250,170);
+
+ctx.moveTo(100,270);
+ctx.lineTo(250,270);
+ctx.lineTo(250,230);
+
+ctx.moveTo(350,170);
+ctx.lineTo(500,170);
+ctx.lineTo(500,130);
+ctx.lineTo(750,130);
+
+ctx.moveTo(350,230);
+ctx.lineTo(500,230);
+ctx.lineTo(500,270);
+ctx.lineTo(750,270);
+
+ctx.stroke();
+
+}
+
+ctx.fillText(
+parallel?"Parallel Circuit":"Series Circuit",
+350,
+350
+);
+
+}
+
+
+function drawKCL(ctx,v){
+
+ctx.beginPath();
+
+ctx.moveTo(450,210);
+ctx.lineTo(200,120);
+
+ctx.moveTo(450,210);
+ctx.lineTo(200,300);
+
+ctx.moveTo(450,210);
+ctx.lineTo(700,210);
+
+ctx.stroke();
+
+ctx.fillText(
+"I₁ + I₂ = I₃",
+360,
+100
+);
+
+ctx.fillText(
+"Current = "+v,
+370,
+350
+);
+
+}
+
+
+function drawKVL(ctx,v){
+
+ctx.strokeRect(250,130,400,180);
+
+ctx.fillText(
+"ΣV = 0",
+400,
+100
+);
+
+ctx.fillText(
+"Voltage = "+v+" V",
+350,
+350
+);
+
+}
+
+
+function drawBridge(ctx,v){
+
+ctx.beginPath();
+
+ctx.moveTo(200,120);
+ctx.lineTo(450,210);
+ctx.lineTo(700,120);
+
+ctx.moveTo(200,300);
+ctx.lineTo(450,210);
+ctx.lineTo(700,300);
+
+ctx.stroke();
+
+ctx.fillText(
+"P/Q = R/S",
+380,
+360
+);
+
+}
+
+
+function drawMeter(ctx,v){
+
+ctx.strokeRect(100,220,700,30);
+
+let x=100+v*7;
+
+ctx.beginPath();
+
+ctx.arc(x,235,10,0,Math.PI*2);
+
+ctx.fillStyle="#e74c3c";
+
+ctx.fill();
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Balance point = "+v+" cm",
+330,
+320
+);
+
+}
+
+
+function drawPot(ctx,v){
+
+ctx.strokeRect(100,220,700,30);
+
+ctx.fillStyle="#0878bd";
+
+ctx.fillRect(
+100,
+220,
+v*7,
+30
+);
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Balancing length = "+v+" cm",
+320,
+320
+);
+
+}
+
+
+function drawCharging(ctx,v){
+
+ctx.beginPath();
+
+for(let x=0;x<700;x++){
+
+let y=
+300-200*(1-Math.exp(-x/(50+v)));
+
+if(x===0)
+ctx.moveTo(100+x,y);
+else
+ctx.lineTo(100+x,y);
+
+}
+
+ctx.stroke();
+
+ctx.fillText(
+"Capacitor Charging",
+350,
+350
+);
+
+}
+
+
+function drawDischarge(ctx,v){
+
+ctx.beginPath();
+
+for(let x=0;x<700;x++){
+
+let y=
+100+200*Math.exp(-x/(50+v));
+
+if(x===0)
+ctx.moveTo(100+x,y);
+else
+ctx.lineTo(100+x,y);
+
+}
+
+ctx.stroke();
+
+ctx.fillText(
+"Capacitor Discharging",
+330,
+350
+);
+
+}
+
+
+function drawMagneticField(ctx,v){
+
+ctx.beginPath();
+
+ctx.moveTo(450,80);
+
+ctx.lineTo(450,330);
+
+ctx.stroke();
+
+for(let r=40;r<180;r+=30){
+
+ctx.beginPath();
+
+ctx.arc(
+450,
+205,
+r,
+0,
+Math.PI*2
+);
+
+ctx.stroke();
+
+}
+
+ctx.fillText(
+"Magnetic Field B ∝ I",
+330,
+370
+);
+
+}
+
+
+function drawSolenoid(ctx,v){
+
+for(let x=200;x<700;x+=35){
+
+ctx.beginPath();
+
+ctx.arc(
+x,
+210,
+60,
+Math.PI/2,
+Math.PI*1.5
+);
+
+ctx.stroke();
+
+}
+
+ctx.fillText(
+"Solenoid field ∝ current",
+300,
+340
+);
+
+}
+
+
+function drawEarth(ctx,v){
+
+ctx.beginPath();
+
+ctx.arc(
+450,
+210,
+120,
+0,
+Math.PI*2
+);
+
+ctx.stroke();
+
+ctx.beginPath();
+
+ctx.moveTo(450,90);
+
+ctx.lineTo(450,330);
+
+ctx.stroke();
+
+ctx.fillText(
+"Earth Magnetic Field",
+330,
+370
+);
+
+}
+
+
+function drawInduction(ctx,v){
+
+ctx.strokeRect(300,120,300,180);
+
+let x=100+(v*6);
+
+ctx.beginPath();
+
+ctx.arc(
+x,
+210,
+35,
+0,
+Math.PI*2
+);
+
+ctx.fillStyle="#555";
+
+ctx.fill();
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Magnet moving →",
+300,
+350
+);
+
+}
+
+
+function drawTransformer(ctx,v){
+
+ctx.strokeRect(250,100,120,220);
+
+ctx.strokeRect(530,100,120,220);
+
+for(let y=120;y<300;y+=25){
+
+ctx.beginPath();
+
+ctx.arc(310,y,15,0,Math.PI*2);
+
+ctx.stroke();
+
+ctx.beginPath();
+
+ctx.arc(590,y,15,0,Math.PI*2);
+
+ctx.stroke();
+
+}
+
+ctx.fillText(
+"Primary",
+270,
+350
+);
+
+ctx.fillText(
+"Secondary",
+540,
+350
+);
+
+}
+
+
+function drawGenerator(ctx){
+
+let a=time;
+
+let x=450+100*Math.cos(a);
+
+let y=210+100*Math.sin(a);
+
+ctx.beginPath();
+
+ctx.arc(450,210,100,0,Math.PI*2);
+
+ctx.stroke();
+
+ctx.beginPath();
+
+ctx.moveTo(450,210);
+
+ctx.lineTo(x,y);
+
+ctx.stroke();
+
+ctx.fillText(
+"Rotating Coil → AC",
+330,
+350
+);
+
+}
+
+
+function drawMotor(ctx){
+
+let a=time*3;
+
+let x=450+100*Math.cos(a);
+
+let y=210+100*Math.sin(a);
+
+ctx.beginPath();
+
+ctx.arc(450,210,100,0,Math.PI*2);
+
+ctx.stroke();
+
+ctx.beginPath();
+
+ctx.moveTo(450,210);
+
+ctx.lineTo(x,y);
+
+ctx.stroke();
+
+ctx.fillText(
+"Motor Rotation",
+360,
+350
+);
+
+}
+
+
+function drawReflection(ctx,v){
+
+ctx.beginPath();
+
+ctx.moveTo(450,80);
+ctx.lineTo(450,340);
+
+ctx.stroke();
+
+ctx.beginPath();
+
+ctx.moveTo(100,280);
+ctx.lineTo(450,200);
+ctx.lineTo(800,280);
+
+ctx.stroke();
+
+ctx.fillText(
+"i = r",
+420,
+100
+);
+
+}
+
+
+function drawRefraction(ctx,v){
+
+ctx.fillStyle="#ccefff";
+
+ctx.fillRect(350,100,250,240);
+
+ctx.fillStyle="#17202a";
+
+ctx.beginPath();
+
+ctx.moveTo(100,100);
+ctx.lineTo(470,220);
+ctx.lineTo(750,300);
+
+ctx.stroke();
+
+ctx.fillText(
+"Refraction",
+390,
+370
+);
+
+}
+
+
+function drawLens(ctx,v,type){
+
+ctx.beginPath();
+
+ctx.ellipse(
+450,
+210,
+45,
+150,
+0,
+0,
+Math.PI*2
+);
+
+ctx.stroke();
+
+ctx.beginPath();
+
+ctx.moveTo(80,140);
+ctx.lineTo(450,210);
+ctx.lineTo(820,140);
+
+ctx.stroke();
+
+ctx.fillText(
+type==="concave"?
+"Concave Lens":
+"Convex Lens",
+360,
+350
+);
+
+}
+
+
+function drawPrism(ctx,v){
+
+ctx.beginPath();
+
+ctx.moveTo(450,90);
+ctx.lineTo(650,300);
+ctx.lineTo(250,300);
+ctx.closePath();
+
+ctx.stroke();
+
+ctx.beginPath();
+
+ctx.moveTo(80,150);
+ctx.lineTo(450,200);
+ctx.lineTo(760,300);
+
+ctx.stroke();
+
+ctx.fillText(
+"Prism Deviation",
+350,
+350
+);
+
+}
+
+
+function drawDiffraction(ctx,v){
+
+for(let i=0;i<20;i++){
+
+let x=100+i*35;
+
+let height=
+80+150*
+Math.abs(
+Math.sin(i+v/10)
+);
+
+ctx.beginPath();
+
+ctx.moveTo(x,320);
+
+ctx.lineTo(x,320-height);
+
+ctx.stroke();
+
+}
+
+ctx.fillText(
+"Diffraction Pattern",
+350,
+370
+);
+
+}
+
+
+function drawInterference(ctx,v){
+
+for(let i=0;i<18;i++){
+
+let x=100+i*40;
+
+let height=
+100+
+Math.abs(
+Math.sin(i+v/15)
+)*180;
+
+ctx.fillRect(
+x,
+320-height,
+22,
+height
+);
+
+}
+
+ctx.fillText(
+"Bright / Dark Fringes",
+330,
+370
+);
+
+}
+
+
+function drawPolarization(ctx,v){
+
+let intensity=
+Math.pow(
+Math.cos(v*Math.PI/200),
+2
+);
+
+ctx.fillStyle="#0878bd";
+
+ctx.fillRect(
+350,
+320-intensity*220,
+100,
+intensity*220
+);
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Intensity = "+intensity.toFixed(2),
+350,
+370
+);
+
+}
+
+
+function drawPhotoelectric(ctx,v){
+
+let electrons=Math.floor(v/5);
+
+ctx.fillStyle="#e8d37b";
+
+ctx.fillRect(250,150,100,150);
+
+ctx.fillStyle="#0878bd";
+
+for(let i=0;i<electrons;i++){
+
+let x=370+i*18;
+
+let y=180+Math.sin(i)*50;
+
+ctx.beginPath();
+
+ctx.arc(x,y,5,0,Math.PI*2);
+
+ctx.fill();
+
+}
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Photoelectrons = "+electrons,
+330,
+350
+);
+
+}
+
+
+function drawSpectrum(ctx,v){
+
+const colors=[
+"#8b00ff",
+"#0000ff",
+"#00aaff",
+"#00aa00",
+"#ffff00",
+"#ff9900",
+"#ff0000"
+];
+
+colors.forEach((c,i)=>{
+
+ctx.fillStyle=c;
+
+ctx.fillRect(
+200+i*70,
+120,
+45,
+180
+);
+
+});
+
+ctx.fillStyle="#17202a";
+
+ctx.fillText(
+"Hydrogen Spectrum",
+350,
+350
+);
+
+}
+
+
+function drawSonometer(ctx,v){
+
+ctx.beginPath();
+
+for(let x=80;x<820;x++){
+
+let y=
+220+
+80*
+Math.sin(
+(x/70)+(time*2)
+);
+
+if(x===80)
+ctx.moveTo(x,y);
+else
+ctx.lineTo(x,y);
+
+}
+
+ctx.stroke();
+
+ctx.fillText(
+"Frequency = "+v+" Hz",
+350,
+350
+);
+
+}
+
+</script>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+```
+sss</body></html>
